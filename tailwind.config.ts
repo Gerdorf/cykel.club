@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config = {
   darkMode: ["class"],
@@ -72,6 +73,15 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        'logo': ['"Space Grotesk"', ...defaultTheme.fontFamily.sans],
+        'display': ['"Ubuntu"', ...defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        'heroSM': ['2.5rem', '2.875rem'],
+        'heroXL': ['5.875rem', '6.1125rem'],
+        'img': '31.25rem',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -21,13 +21,20 @@ export default async function AuthButton() {
       </form>
     </div>
   ) : (
-    <div className="flex gap-2">
-      <Button asChild size="sm" variant={"outline"}>
-        <Link href="/sign-in">Log ind</Link>
-      </Button>
-      <Button asChild size="sm" variant={"default"}>
-        <Link href="/sign-up">Opret konto</Link>
-      </Button>
+    <div className="flex justify-between w-full">
+      <div>
+        <Link href="/" className="text-2xl font-logo font-bold">Cykel.club</Link>
+      </div>
+
+      <div className="gap-2 flex">
+        <Button asChild size="auth" variant={"in"}>
+          <Link href="/sign-in">Log ind</Link>
+        </Button>
+        <Button asChild size="auth" variant={"out"}>
+          <Link href="/sign-up">Opret konto</Link>
+        </Button>
+      </div>
     </div>
+
   );
 }
